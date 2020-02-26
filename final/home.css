@@ -1,0 +1,11 @@
+#menu{
+	top: 15px;
+	left: 30px;
+	border:1px solid black; 
+	width: 300px;
+}
+#Que_Ans{
+	position: absolute;
+	right: 600px;	
+	top: 15px;
+}
