@@ -55,156 +55,176 @@ var per = 0.0
 
 var chk = document.getElementById('Que_Ans')
 
+var rb = document.getElementsByTagName('label');			
+
 
 function next(){		
+	var y = document.getElementById("rb1")
+	var n = document.getElementById("rb2")
 	if(t1 == 1){	
-			document.getElementsByClassName("rb1").style.display = "block";
-			document.getElementsByClassName("rb2").style.display = "block";
-			document.getElementsByClassName("rb1").style.display = "Yes"
-			document.getElementsByClassName("rb1").style.display = "No"
+			document.getElementById("rb1").style.display = "block";
+			document.getElementById("rb2").style.display = "block";
+			rb[0].style.display = "block";
+			rb[1].style.display = "block";
 			document.getElementById("nxt").innerHTML = "Next";
 			q[0].innerHTML = localStorage.getItem("t1")
 			if(t2 == 1){
 				q[1].innerHTML = localStorage.getItem("t1q1")				
 			}
 			else if(t2 == 2){
-				// if(rb[0].checked){
-				// 	per += 3.5
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
-				//if(rb1 == )
+				if(y.checked){
+					per += 3.5
+				}
+				y.checked = false
+				n.checked = false
 				q[1].innerHTML = localStorage.getItem("t1q2")				
 			}
 			else if(t2 == 3){
-				// if(rb[0].checked){
-				// 	per += 6.5;
-				// }
-				// rb[0].checked = false;
-				// rb[1].checked = false;
+				if(y.checked){
+					per += 6.5;
+				}
+				y.checked = false;
+				n.checked = false;
 				q[1].innerHTML = localStorage.getItem("t1q3")
 			}
 			else if(t2 == 4){
-				// if(rb[0].checked){
-				// 	per += 6
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
+				if(y.checked){
+					per += 6
+				}
+				y.checked = false
+				n.checked = false
 				q[1].innerHTML = localStorage.getItem("t1q4")
 			}
 			else if(t2 == 5){
-				// if(rb[0].checked){
-				// 	per += 9.5;
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
+				if(y.checked){
+					per += 9.5;
+				}
+				y.checked = false
+				n.checked = false
 				q[1].innerHTML = localStorage.getItem("t1q5")
 			}
 			else{
-				// if(rb[0].checked){
-				// 	per += 10.5;
-				// }
+				if(y.checked){
+					per += 10.5;
+				}
+				y.checked = false
+				n.checked = false
 				q[1].innerHTML = localStorage.getItem("t1q6")
-				// rb[0].checked = false
-				// rb[1].checked = false
 				t1++
 				t2 = 0
 			}
 			t2++			
 		}		
-		else if(t1 == 2){			
+	else if(t1 == 2){			
 			q[0].innerHTML = localStorage.getItem("t2")
 			if(t2 == 1){
-				// if(rb[0].checked){
-				// 	per += 4;
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
+				if(y.checked){
+					per += 4;
+				}
+				y.checked = false
+				n.checked = false
 				
 				q[1].innerHTML = localStorage.getItem("t2q1")
 			}
 			else if(t2 == 2){
-				// if(rb[0].checked){
-				// 	per += 5.5;
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
+				if(y.checked){
+					per += 5.5;
+				}
+				y.checked = false
+				n.checked = false
 				q[1].innerHTML = localStorage.getItem("t2q2")
 			}
 			else{
-				// if(rb[0].checked){
-				// 	per += 9.5;
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
+				if(y.checked){
+					per += 9.5;
+				}
+				y.checked = false
+				n.checked = false
 				q[1].innerHTML = localStorage.getItem("t2q3")
 				t1++
 				t2 = 0
 			}
 			t2++
 		}		
-		else if(t1 == 3){
+	else if(t1 == 3){
 			q[0].innerHTML = localStorage.getItem("t3")
 			if(t2 == 1){
-				// if(rb[0].checked){
-				// 	per += 5;
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
+				if(y.checked){
+					per += 5;
+				}
+				y.checked = false
+				n.checked = false
 				q[1].innerHTML = localStorage.getItem("t3q1")
-				t2 = 0
 				t1++
 			}
+			t2 = 0
 			t2++
 		}
-		else if(t1 == 4){
+	else if(t1 == 4){
 			q[0].innerHTML = localStorage.getItem("t4");
 			if(t2 == 1){
-				// if(rb[0].checked){
-				// 	per += 5;
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
+				if(y.checked){
+					per += 5;
+				}
+				y.checked = false
+				n.checked = false
 				q[1].innerHTMl = localStorage.getItem("t4q1")
 				t2 = 0
 				t1++
 			}
 			t2++
 		}
-		else if(t1 == 5){
+	else if(t1 == 5){
 			q[0].innerHTML = localStorage.getItem("t5")
 			if(t2 == 1){
-				// if(rb[0].checked){
-				// 	per += 20;
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
+				if(y.checked){
+					per += 20;
+				}
+				y.checked = false
+				n.checked = false
 				q[1].innerHTML = localStorage.getItem("t5q1")
 			}
 			else if(t2 == 2){
-				// if(rb[0].checked){
-				// 	per += 8;
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
+				if(y.checked){
+					per += 8;
+				}
+				y.checked = false
+				n.checked = false
 				q[1].innerHTML = localStorage.getItem("t5q2")
 			}
 			else if(t2 == 3){
-				// if(rb[0].checked){
-				// 	per += 4;
-				// }
-				// rb[0].checked = false
-				// rb[1].checked = false
+				if(y.checked){
+					per += 4;
+				}
+				n.checked = false
+				y.checked = false
 				q[1].innerHTML = localStorage.getItem("t5q3")
 			}
 			else{
-				if(rb[0].checked){
+				if(y.checked){
 					per += 3;
 				}
-				document.getElementById("yn").style.display = "none";
+				document.getElementById("rb1").style.display = "none";
+				document.getElementById("rb2").style.display = "none";
+				
+				rb[0].style.display = "none";
+				rb[1].style.display = "none";
 				t2 = 0
-
+				window.open("front.html")
+				localStorage.setItem("per",per);
 			}
 			t2++
 		}
+		console.log(per)		
 	}
+
+
+
+	function op(){
+		var prog = document.getElementById("prog");		
+		var n = per.toString();
+		var res = n.concat("%");
+		prog.style.width = res;
+	}
+
+
