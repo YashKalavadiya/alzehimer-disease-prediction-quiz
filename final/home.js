@@ -34,7 +34,7 @@ localStorage.setItem("t3q1","Is your ability to make reasonable decisions and ju
 
 localStorage.setItem("t4","Planning and performing familiar tasks")
 
-localStorage.setItem("t4q1","forget how to perform basic tasks such as dressing and bathing.")
+localStorage.setItem("t4q","forget how to perform basic tasks such as dressing and bathing.")
 
 localStorage.setItem("t5","Changes in personality and behavior")
 
@@ -156,8 +156,8 @@ function next(){
 				n.checked = false
 				q[1].innerHTML = localStorage.getItem("t3q1")
 				t1++
+				t2 = 0
 			}
-			t2 = 0
 			t2++
 		}
 	else if(t1 == 4){
@@ -168,10 +168,10 @@ function next(){
 				}
 				y.checked = false
 				n.checked = false
-				q[1].innerHTMl = localStorage.getItem("t4q1")
-				t2 = 0
+				q[1].innerHTML = localStorage.getItem("t4q")
 				t1++
 			}
+			t2 = 0
 			t2++
 		}
 	else if(t1 == 5){
@@ -222,9 +222,19 @@ function next(){
 
 	function op(){
 		var prog = document.getElementById("prog");		
+		per = localStorage.getItem("per")
 		var n = per.toString();
 		var res = n.concat("%");
+		var op1 = document.getElementById("progr");
+		console.log(res)
 		prog.style.width = res;
+		prog.innerHTML = res;
+		if(per<32){
+			alert("you are Under risk. so dont worry and just chill")
+		}
+		else{
+			alert("You have chances of having alhzymer disease. so immidately go to your nearest Neurologist")
+		}
 	}
 
 
