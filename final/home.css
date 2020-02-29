@@ -8,4 +8,6 @@
 	position: absolute;
 	right: 300px;	
 	top: 15px;
+	align-content: center;
+	width: 400px
 }
